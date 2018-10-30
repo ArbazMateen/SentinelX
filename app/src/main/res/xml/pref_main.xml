@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Markers">
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/focus_on_marker_key"
+            android:summary="Always focus on selected marker"
+            android:title="Focus on Marker" />
+
+        <!--<ListPreference-->
+            <!--android:defaultValue="15"-->
+            <!--android:entries="@array/update_time"-->
+            <!--android:entryValues="@array/update_time_value"-->
+            <!--android:key="@string/update_time_key"-->
+            <!--android:summary="Update location on every 15 sec"-->
+            <!--android:title="Update location" />-->
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Map">
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/rotate_map_key"
+            android:summary="Rotate map towards direction"
+            android:title="Rotate Map" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/alternatives_path_key"
+            android:summary="Show alternative paths on map"
+            android:title="Alternative Paths" />
+
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/map_type"
+            android:entryValues="@array/map_type_value"
+            android:key="@string/map_type_key"
+            android:summary="Map type NORMAL"
+            android:title="Map Type" />
+
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/map_mode"
+            android:entryValues="@array/map_mode_value"
+            android:key="@string/map_mode_key"
+            android:summary="Map mode DRIVING"
+            android:title="Mode" />
+
+        <ListPreference
+            android:defaultValue="15"
+            android:entries="@array/update_time"
+            android:entryValues="@array/update_time_value"
+            android:key="@string/update_time_key"
+            android:summary="Update location on every 15 sec"
+            android:title="Update location" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/header_about_sentinelx">
+
+        <Preference
+            android:selectable="false"
+            android:summary="@string/summary_about_sentinelx" />
+
+        <Preference
+            android:selectable="false"
+            android:summary="@string/summery_version"
+            android:title="@string/title_version" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/header_about">
+
+        <Preference
+            android:selectable="false"
+            android:summary="@string/summary_about" />
+
+        <Preference
+            android:summary="@string/summary_contact"
+            android:title="@string/title_contact">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/mail_address_contact" />
+
+        </Preference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="8dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_profile_image"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/white"
+        android:contentDescription="@string/user_profile_logo_description"
+        android:src="@mipmap/ic_launcher_round" />
+
+    <ImageView
+        android:id="@+id/user_status"
+        android:layout_width="10dp"
+        android:layout_height="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_toEndOf="@+id/user_profile_image"
+        android:layout_toRightOf="@+id/user_profile_image"
+        android:contentDescription="@string/user_status_desc"
+        android:src="@drawable/offline" />
+
+    <TextView
+        android:id="@+id/user_display_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/user_status"
+        android:layout_toRightOf="@+id/user_status"
+        android:singleLine="true"
+        android:text="Username"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/white"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/user_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/user_display_name"
+        android:layout_toEndOf="@id/user_profile_image"
+        android:layout_toRightOf="@id/user_profile_image"
+        android:singleLine="true"
+        android:text="username@gmail.com"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        tools:ignore="RtlSymmetry" />
+
+    <!--<ImageView-->
+        <!--android:id="@+id/user_option_menu"-->
+        <!--android:layout_width="24dp"-->
+        <!--android:layout_height="24dp"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:background="?android:attr/selectableItemBackground"-->
+        <!--android:contentDescription="@string/drop_down_option_menu"-->
+        <!--android:src="@drawable/drop_down_menu_icon" />-->
+
+</RelativeLayout>

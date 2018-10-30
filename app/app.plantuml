@@ -1,0 +1,374 @@
+@startuml
+
+title __APP's Class Diagram__\n
+
+  package com.thkf.sentinelx {
+    class BuildConfig {
+    }
+  }
+  
+
+  package com.thkf.sentinelx {
+    package com.thkf.sentinelx.map {
+      class DirectionsJSONParser {
+      }
+    }
+  }
+  
+
+  package com.thkf.sentinelx {
+    class Manifest {
+    }
+  }
+  
+
+  package firebase.com.protolitewrapper {
+    class R {
+    }
+  }
+  
+
+  package com.google.android.gms.stats {
+    class R {
+    }
+  }
+  
+
+  package com.google.firebase.iid {
+    package com.google.firebase.iid.internal {
+      class R {
+      }
+    }
+  }
+  
+
+  package android.support.compat {
+    class R {
+    }
+  }
+  
+
+  package com.google.firebase.database {
+    package com.google.firebase.database.collection {
+      class R {
+      }
+    }
+  }
+  
+
+  package android.support.design {
+    class R {
+    }
+  }
+  
+
+  package com.google.firebase.measurement {
+    package com.google.firebase.measurement_impl {
+      class R {
+      }
+    }
+  }
+  
+
+  package android.arch.lifecycle {
+    package android.arch.lifecycle.viewmodel {
+      class R {
+      }
+    }
+  }
+  
+
+  package com.google.android.gms.common {
+    class R {
+    }
+  }
+  
+
+  package android.support.graphics.drawable {
+    package android.support.graphics.drawable.animated {
+      class R {
+      }
+    }
+  }
+  
+
+  package com.google.android.gms.location {
+    class R {
+    }
+  }
+  
+
+  package com.google.android.gms.base {
+    class R {
+    }
+  }
+  
+
+  package com.bumptech.glide {
+    class R {
+    }
+  }
+  
+
+  package com.google.firebase.measurement {
+    class R {
+    }
+  }
+  
+
+  package com.bumptech.glide {
+    package com.bumptech.glide.gifdecoder {
+      class R {
+      }
+    }
+  }
+  
+
+  package com.google.firebase.auth {
+    class R {
+    }
+  }
+  
+
+  package com.google.firebase.iid {
+    class R {
+    }
+  }
+  
+
+  package android.support.multidex {
+    class R {
+    }
+  }
+  
+
+  package com.google.firebase.firestore {
+    class R {
+    }
+  }
+  
+
+  package de.hdodenhof.circleimageview {
+    class R {
+    }
+  }
+  
+
+  package android.support.coreutils {
+    class R {
+    }
+  }
+  
+
+  package android.arch.lifecycle {
+    class R {
+    }
+  }
+  
+
+  package com.google.firebase.firebase_core {
+    class R {
+    }
+  }
+  
+
+  package android.support.v7.recyclerview {
+    class R {
+    }
+  }
+  
+
+  package com.google.firebase.auth {
+    package com.google.firebase.auth.internal {
+      class R {
+      }
+    }
+  }
+  
+
+  package com.google.firebase.storage.common {
+    class R {
+    }
+  }
+  
+
+  package me.zhanghai.android.materialprogressbar {
+    class R {
+    }
+  }
+  
+
+  package com.google.maps.android {
+    class R {
+    }
+  }
+  
+
+  package android.support.mediacompat {
+    class R {
+    }
+  }
+  
+
+  package com.afollestad.materialdialogs {
+    class R {
+    }
+  }
+  
+
+  package android.support.transition {
+    class R {
+    }
+  }
+  
+
+  package com.thkf.sentinelx {
+    class R {
+    }
+  }
+  
+
+  package com.firebase.ui.storage {
+    class R {
+    }
+  }
+  
+
+  package com.google.firebase.storage.api {
+    class R {
+    }
+  }
+  
+
+  package com.google.android.gms.flags {
+    class R {
+    }
+  }
+  
+
+  package android.support.v7.appcompat {
+    class R {
+    }
+  }
+  
+
+  package com.google.firebase.analytics.connector {
+    class R {
+    }
+  }
+  
+
+  package com.google.firebase.database {
+    package com.google.firebase.database.connection {
+      class R {
+      }
+    }
+  }
+  
+
+  package android.arch.core {
+    class R {
+    }
+  }
+  
+
+  package com.google.android.gms.measurement_base {
+    class R {
+    }
+  }
+  
+
+  package android.arch.lifecycle {
+    package android.arch.lifecycle.livedata.core {
+      class R {
+      }
+    }
+  }
+  
+
+  package android.support.fragment {
+    class R {
+    }
+  }
+  
+
+  package com.google.android.gms.places_placereport {
+    class R {
+    }
+  }
+  
+
+  package com.google.android.gms.maps {
+    class R {
+    }
+  }
+  
+
+  package com.google.firebase.analytics.connector {
+    package com.google.firebase.analytics.connector.impl {
+      class R {
+      }
+    }
+  }
+  
+
+  package com.google.firebase.database {
+    class R {
+    }
+  }
+  
+
+  package android.support.v4 {
+    class R {
+    }
+  }
+  
+
+  package com.google.firebase.firebase_common {
+    class R {
+    }
+  }
+  
+
+  package android.support.coreui {
+    class R {
+    }
+  }
+  
+
+  package com.google.android.gms.tasks {
+    class R {
+    }
+  }
+  
+
+  package android.support.graphics.drawable {
+    class R {
+    }
+  }
+  
+
+  package com.google.android.gms.ads_identifier {
+    class R {
+    }
+  }
+  
+
+  package com.thkf.sentinelx {
+    package com.thkf.sentinelx.commons {
+      class UniversalImageLoader {
+      }
+    }
+  }
+  
+
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

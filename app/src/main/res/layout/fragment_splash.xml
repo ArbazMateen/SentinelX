@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greenish"
+    tools:context="com.thkf.sentinelx.fragments.SplashFragment">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="219dp"
+        android:fontFamily="@font/playball"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/app_name"
+        android:textColor="@color/white_grayish"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

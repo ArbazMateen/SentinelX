@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/info_user_profile_image"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:contentDescription="@string/user_profile_logo_description"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/info_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/info_user_profile_image"
+            android:layout_toLeftOf="@id/info_follow"
+            android:layout_toRightOf="@id/info_user_profile_image"
+            android:layout_toStartOf="@id/info_follow"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/info_snippet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/info_title"
+            android:layout_toEndOf="@id/info_user_profile_image"
+            android:layout_toLeftOf="@id/info_follow"
+            android:layout_toRightOf="@id/info_user_profile_image"
+            android:layout_toStartOf="@id/info_follow"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/dark_gray"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/info_last_seen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/info_snippet"
+            android:layout_toEndOf="@id/info_user_profile_image"
+            android:layout_toLeftOf="@id/info_follow"
+            android:layout_toRightOf="@id/info_user_profile_image"
+            android:layout_toStartOf="@id/info_follow"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/dark_gray"
+            tools:ignore="RtlSymmetry" />
+
+        <View
+            android:id="@+id/info_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/info_user_profile_image"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#B6B6B6" />
+
+        <TextView
+            android:id="@+id/info_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/info_divider"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/dark_gray"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/info_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/info_location"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:ellipsize="none"
+            android:singleLine="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/dark_gray"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageButton
+            android:id="@+id/info_follow"
+            android:layout_width="58dp"
+            android:layout_height="64dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/follow"
+            android:src="@drawable/follow" />
+
+
+    </RelativeLayout>
+</LinearLayout>
+
