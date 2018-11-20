@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "499224980865",
+    "firebase_url": "https://sentinelx-66.firebaseio.com",
+    "project_id": "sentinelx-66",
+    "storage_bucket": "sentinelx-66.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499224980865:android:60e2589e6bdd613e",
+        "android_client_info": {
+          "package_name": "com.thkf.sentinelx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499224980865-2ifrvgqivterknarj3tvod75nh0n95il.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfsb2fBy_KUCLBaZ3HeaxVC1FN7lmfsSQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -65,6 +65,7 @@ import com.thkf.sentinelx.commons.ONLINE
 import com.thkf.sentinelx.commons.PASSWORD
 import com.thkf.sentinelx.commons.ROLE
 import com.thkf.sentinelx.commons.ROOT
+import com.thkf.sentinelx.commons.STATUS
 import com.thkf.sentinelx.commons.UID
 import com.thkf.sentinelx.commons.USER
 import com.thkf.sentinelx.commons.auth
@@ -249,6 +250,10 @@ class MainActivity : AppCompatActivity(),
                         .flat(true)
                         .snippet(it.email)
                         .icon(if (it.status == ONLINE) ONLINE_MARKER else OFFLINE_MARKER))
+//                            BitmapDescriptorFactory.fromBitmap(getBitmapFromVectorDrawable(R.drawable.navigation_online))
+//                            else
+//                            BitmapDescriptorFactory.fromBitmap(getBitmapFromVectorDrawable(R.drawable.navigation_offline))))
+//                        .icon(if (it.status == ONLINE) ONLINE_MARKER else OFFLINE_MARKER))
                 mark.tag = it
                 markers[it.uid] = mark
             }
@@ -406,8 +411,15 @@ class MainActivity : AppCompatActivity(),
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_logout -> {
-                if (online)
+                if (online) {
+
+                    val data = mapOf(STATUS to OFFLINE)
+                    firestore().collection(ROOT)
+                            .document(Prefs(this).get(UID, ""))
+                            .update(data)
+
                     signOut()
+                }
                 finish()
                 true
             }
@@ -560,6 +572,7 @@ class MainActivity : AppCompatActivity(),
 
         // TODO location update with history
         val data = mapOf(LAT to location.latitude, LON to location.longitude, BEARING to location.bearing,
+                STATUS to ONLINE,
                 LAST_UPDATE to FieldValue.serverTimestamp())
         firestore().collection(ROOT)
                 .document(Prefs(this).get(UID, ""))
@@ -574,7 +587,9 @@ class MainActivity : AppCompatActivity(),
                     .title("Your are here")
                     .position(latLng)
                     .anchor(0.5f, 0.6f)
-                    .icon(ME).flat(true))
+                    .icon(ME)
+                    .flat(true))
+//                    .icon(ME).flat(true))
         } else {
             marker?.position = latLng
             marker?.rotation = location.bearing
@@ -768,7 +783,6 @@ class MainActivity : AppCompatActivity(),
             }
         }
     }
-
 
 }
 

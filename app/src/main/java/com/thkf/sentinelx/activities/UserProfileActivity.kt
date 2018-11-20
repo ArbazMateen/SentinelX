@@ -223,18 +223,26 @@ class UserProfileActivity : AppCompatActivity() {
         val uploadTask = storageRef.putBytes(mBytes!!, metaData)
         uploadTask.addOnCompleteListener { task ->
             if (task.isSuccessful) {
-//                val downloadUrl = task.result.downloadUrl
+//                val downloadUrl = task.result
+//                val downloadUrl = task.result.metadata?.reference?.downloadUrl
                 val downloadUrl = task.result.metadata?.reference?.downloadUrl
                 logI("Image Url: ${downloadUrl.toString()}")
-                firestore().document(doc(uid()))
-                        .update(mapOf(IMAGE to downloadUrl.toString()))
-                Prefs(this).putString(IMAGE, downloadUrl.toString())
-                logI("Profile image url set in firestore.")
+
+                storageRef.downloadUrl.addOnSuccessListener { uri ->
+                    logI("Image Url: ${uri.toString()}")
+
+                    firestore().document(doc(uid()))
+                            .update(mapOf(IMAGE to uri.toString()))
+                    Prefs(this).putString(IMAGE, uri.toString())
+                    logI("Profile image url set in firestore.")
+                }
+
             }
+
         }
 
         launch(UI) {
-            delay(3500)
+            delay(5000)
             waitDialog.dismiss()
             finish()
         }
@@ -345,6 +353,7 @@ class UserProfileActivity : AppCompatActivity() {
                 && ContextCompat.checkSelfPermission(this.applicationContext,
                         permissions[2]) == PackageManager.PERMISSION_GRANTED) {
             permissionsGranted = true
+            selectImageDialog()
         } else {
             ActivityCompat.requestPermissions(this, permissions, PERMISSION_REQUEST_CODE)
         }
